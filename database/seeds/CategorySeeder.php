@@ -10,25 +10,25 @@ class CategorySeeder extends Seeder
     {
         $cateories = [
             [
-                'categories_name' => 'Gatti'
+                'name' => 'Gatti'
             ],
             [
-                'categories_name' => 'Cani'
+                'name' => 'Cani'
             ],
             [
-                'categories_name' => 'Sport'
+                'name' => 'Sport'
             ],
             [
-                'categories_name' => 'Giochi'
+                'name' => 'Giochi'
             ],
             [
-                'categories_name' => 'Animali'
+                'name' => 'Animali'
             ],
             [
-                'categories_name' => 'Pollame'
+                'name' => 'Pollame'
             ],
             [
-                'categories_name' => 'Cibo'
+                'name' => 'Cibo'
             ],
         ];
 

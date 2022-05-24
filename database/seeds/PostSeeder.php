@@ -19,7 +19,7 @@ class PostSeeder extends Seeder
 
             Post::create([
                 'title'         =>  $title,
-                'categories_id' =>  Category::inRandomOrder()->first()->id,
+                'category_id'   =>  Category::inRandomOrder()->first()->id,
                 'creator_name'  =>  $creator_name,
                 'description'   =>  $description,
             ]);

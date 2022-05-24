@@ -10,7 +10,7 @@ class Post extends Model
 
     public $timestamps = false;
     protected $fillable = [
-        'categories_id',
+        'category_id',
         'title',
         'creator_name',
         'description',
@@ -30,6 +30,6 @@ class Post extends Model
     } */
 
     public function category() {
-        return $this->belongsTo('App\Category', 'categories_id');
+        return $this->belongsTo('App\Category');
     }
 }

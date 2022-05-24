@@ -31,7 +31,7 @@
           <th scope="row">{{ $post->id }}</th>
           <td class="col-1">{{ $post->creator_name }}</td>
           <td>{{ $post->title }}</td>
-          <td>{{ $post->category->categories_name }}</td>
+          <td>{{ $post->category->name }}</td>
           <td>WIP</td>
           <td>
             <a class="btn btn-info" id="show-a" href="{{ route('admin.posts.show', $post->id)}}">VIEW</a>

@@ -21,12 +21,12 @@ class PostController extends Controller
     public function index()
     {
         $postsData = Post::all();
-        $categoriesData = Category::all();
+        $categories = Category::all();
 
 
         return view('admin.posts.index', [
             'postsData'         => $postsData,
-            'categoriesData'    => $categoriesData,
+            'categoriesData'    => $categories,
         ]);
     }
 
@@ -34,9 +34,9 @@ class PostController extends Controller
     public function create()
     {
 
-        $categoriesData = Category::all();
+        $categories = Category::all();
 
-        return view ('admin.posts.create', compact('categoriesData'));
+        return view ('admin.posts.create', compact('categories'));
     }
 
     
@@ -63,11 +63,11 @@ class PostController extends Controller
     
     public function edit(Post $post)
     {
-        $categoriesData = Category::all();
+        $categories = Category::all();
 
         return view('admin.posts.edit', [
             'post'              => $post,
-            'categoriesData'    => $categoriesData,
+            'categories'    => $categories,
         ]);
     }
 
