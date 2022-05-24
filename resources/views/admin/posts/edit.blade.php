@@ -31,6 +31,17 @@
             <input type="text" id="description" name="description" value="{{ $post->description}}">
         </div>
 
+        <select class="form-select" aria-label="Default select example" name="category_id" id="category">
+            <option value="">Select a category</option>
+
+            @foreach ($categories as $category)
+                <option value="{{ $category->id }}"
+                    @if ($category->id == $post->category->id) selected @endif>
+                        {{ $category->name }}
+                </option>
+            @endforeach
+        </select>
+
         @error('description')
             <div class="alert-error alert alert-danger">{{ $message }}</div>
         @enderror
